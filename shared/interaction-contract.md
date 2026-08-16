@@ -1,7 +1,8 @@
 # Portable Interaction Contract
 
-Conductor's user interaction semantics are canonical. The visual presentation
-may vary by host, but the decision barrier must not.
+Conductor's user interaction semantics and normative artifacts are canonical
+en-US. The visual presentation may vary by host, but the decision barrier must
+not.
 
 ## Question Types
 
@@ -17,7 +18,9 @@ may vary by host, but the decision barrier must not.
 2. Otherwise, render the same question as formatted text.
 3. In text-only sessions, ask questions sequentially and wait after each one.
 4. When the canonical protocol requires an `Other` option, preserve it.
-5. Never infer approval from silence, a failed interaction, or an ambiguous
+5. A host may translate user-facing presentation, but the canonical en-US text,
+   option semantics, artifact names, and status markers remain normative.
+6. Never infer approval from silence, a failed interaction, or an ambiguous
    answer.
 
 ## Confirmation Barriers

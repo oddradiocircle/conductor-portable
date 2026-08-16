@@ -1,148 +1,146 @@
 # Agent Skills Catalog
 
-This catalog defines the curriculum of skills available to the Conductor
-extension.
+This catalog defines optional skills that Conductor may recommend. Every source
+is pinned to an immutable Git revision. The installer must use the repository,
+revision, and path together and must validate the downloaded frontmatter before
+enabling a skill.
+
+**Party semantics**: `1p` means the repository is controlled by the named
+publisher's public organization; it does not mean Conductor has audited the
+skill or established that it is safe. `3p` means a community publisher.
 
 ## Firebase Skills
 
-Skills focused on setting up, managing, and using various Firebase services.
-
 ### firebase-ai-logic-basics
 
--   **Description**: Official skill for integrating Firebase AI Logic (Gemini
-    API) into web applications. Covers setup, multimodal inference, structured
-    output, and security.
--   **URL**:
-    https://raw.githubusercontent.com/firebase/agent-skills/main/skills/firebase-ai-logic-basics/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `firebase`, `firebase-admin`
-    -   **Keywords**: `Firebase`, `AI Logic`, `Gemini API`, `GenAI`
+- **Description**: Integrate Firebase AI Logic into web applications.
+- **Repository**: firebase/agent-skills
+- **Publisher**: Firebase
+- **Revision**: `073edf7bb747c27b9c911a9126adaa5bc4648fdc`
+- **Path**: `skills/firebase-ai-logic-basics/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `firebase`, `firebase-admin`
+  - **Keywords**: `Firebase`, `AI Logic`, `Gemini API`, `GenAI`
 
 ### firebase-app-hosting-basics
 
--   **Description**: Deploy and manage web apps with Firebase App Hosting. Use
-    this skill when deploying Next.js/Angular apps with backends.
--   **URL**:
-    https://raw.githubusercontent.com/firebase/agent-skills/main/skills/firebase-app-hosting-basics/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `firebase`, `firebase-admin`
-    -   **Keywords**: `Firebase App Hosting`, `Next.js`, `Angular`
+- **Description**: Deploy and manage web apps with Firebase App Hosting.
+- **Repository**: firebase/agent-skills
+- **Publisher**: Firebase
+- **Revision**: `073edf7bb747c27b9c911a9126adaa5bc4648fdc`
+- **Path**: `skills/firebase-app-hosting-basics/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `firebase`, `firebase-admin`
+  - **Keywords**: `Firebase App Hosting`, `Next.js`, `Angular`
 
 ### firebase-auth-basics
 
--   **Description**: Guide for setting up and using Firebase Authentication. Use
-    this skill when the user's app requires user sign-in, user management, or
-    secure data access using auth rules.
--   **URL**:
-    https://raw.githubusercontent.com/firebase/agent-skills/main/skills/firebase-auth-basics/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `firebase`, `firebase-admin`
-    -   **Keywords**: `Firebase Authentication`, `Auth`, `Sign-in`
+- **Description**: Set up and use Firebase Authentication securely.
+- **Repository**: firebase/agent-skills
+- **Publisher**: Firebase
+- **Revision**: `073edf7bb747c27b9c911a9126adaa5bc4648fdc`
+- **Path**: `skills/firebase-auth-basics/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `firebase`, `firebase-admin`
+  - **Keywords**: `Firebase Authentication`, `Auth`, `Sign-in`
 
 ### firebase-basics
 
--   **Description**: Guide for setting up and using Firebase. Use this skill
-    when the user is getting started with Firebase - setting up local
-    environment, using Firebase for the first time, or adding Firebase to their
-    app.
--   **URL**:
-    https://raw.githubusercontent.com/firebase/agent-skills/main/skills/firebase-basics/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `firebase`, `firebase-admin`
-    -   **Keywords**: `Firebase`, `Setup`
+- **Description**: Set up Firebase and add it to an application.
+- **Repository**: firebase/agent-skills
+- **Publisher**: Firebase
+- **Revision**: `073edf7bb747c27b9c911a9126adaa5bc4648fdc`
+- **Path**: `skills/firebase-basics/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `firebase`, `firebase-admin`
+  - **Keywords**: `Firebase`, `Setup`
 
-### firebase-data-connect-basics
+### firebase-data-connect
 
--   **Description**: Build and deploy Firebase Data Connect backends with
-    PostgreSQL. Use for schema design, GraphQL queries/mutations, authorization,
-    and SDK generation for web, Android, iOS, and Flutter apps.
--   **URL**:
-    https://raw.githubusercontent.com/firebase/agent-skills/main/skills/firebase-data-connect-basics/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `firebase`, `firebase-admin`
-    -   **Keywords**: `Firebase Data Connect`, `PostgreSQL`, `GraphQL`
+- **Description**: Build Firebase Data Connect backends with PostgreSQL.
+- **Repository**: firebase/agent-skills
+- **Publisher**: Firebase
+- **Revision**: `073edf7bb747c27b9c911a9126adaa5bc4648fdc`
+- **Path**: `skills/firebase-data-connect-basics/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `firebase`, `firebase-admin`
+  - **Keywords**: `Firebase Data Connect`, `PostgreSQL`, `GraphQL`
 
-### firebase-firestore-basics
+### firebase-firestore
 
--   **Description**: Comprehensive guide for Firestore basics including
-    provisioning, security rules, and SDK usage. Use this skill when the user
-    needs help setting up Firestore, writing security rules, or using the
-    Firestore SDK in their application.
--   **URL**:
-    https://raw.githubusercontent.com/firebase/agent-skills/main/skills/firebase-firestore-basics/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `firebase`, `firebase-admin`
-    -   **Keywords**: `Firestore`, `Database`, `Security Rules`
+- **Description**: Set up Firestore, security rules, and SDK usage.
+- **Repository**: firebase/agent-skills
+- **Publisher**: Firebase
+- **Revision**: `073edf7bb747c27b9c911a9126adaa5bc4648fdc`
+- **Path**: `skills/firebase-firestore/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `firebase`, `firebase-admin`
+  - **Keywords**: `Firestore`, `Database`, `Security Rules`
 
 ### firebase-hosting-basics
 
--   **Description**: Skill for working with Firebase Hosting (Classic). Use this
-    when you want to deploy static web apps, Single Page Apps (SPAs), or simple
-    microservices. Do NOT use for Firebase App Hosting.
--   **URL**:
-    https://raw.githubusercontent.com/firebase/agent-skills/main/skills/firebase-hosting-basics/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `firebase`, `firebase-admin`
-    -   **Keywords**: `Firebase Hosting`, `Static Hosting`
+- **Description**: Deploy static web apps with Firebase Hosting.
+- **Repository**: firebase/agent-skills
+- **Publisher**: Firebase
+- **Revision**: `073edf7bb747c27b9c911a9126adaa5bc4648fdc`
+- **Path**: `skills/firebase-hosting-basics/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `firebase`, `firebase-admin`
+  - **Keywords**: `Firebase Hosting`, `Static Hosting`
 
 ## DevOps Skills
 
-Skills for designing, building, and managing CI/CD pipelines and infrastructure
-on Google Cloud.
+### google-cicd-deploy
 
-### cloud-deploy-pipelines
+- **Description**: Deploy applications to Google Cloud services.
+- **Repository**: gemini-cli-extensions/devops
+- **Publisher**: Gemini CLI Extensions
+- **Revision**: `85812c656ac5e04349e93958b2f2823e15c5adf5`
+- **Path**: `skills/google-cicd-deploy/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `gcloud`
+  - **Keywords**: `Cloud Run`, `GCS`, `GKE`, `Deployment`, `Google Cloud`
 
--   **Description**: Manage the entire lifecycle of Google Cloud Deploy, from
-    designing and creating delivery pipelines to managing releases and debugging
-    failures.
--   **URL**:
-    https://raw.githubusercontent.com/gemini-cli-extensions/devops/main/skills/cloud-deploy-pipelines/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `skaffold`
-    -   **Keywords**: `Cloud Deploy`, `delivery pipeline`, `skaffold.yaml`,
-        `clouddeploy.yaml`
+### google-cicd-pipeline-design
 
-### gcp-cicd-deploy
+- **Description**: Design and implement CI/CD pipelines on Google Cloud.
+- **Repository**: gemini-cli-extensions/devops
+- **Publisher**: Gemini CLI Extensions
+- **Revision**: `85812c656ac5e04349e93958b2f2823e15c5adf5`
+- **Path**: `skills/google-cicd-pipeline-design/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Keywords**: `CI/CD`, `Pipeline Design`, `Google Cloud`, `Architecture`
 
--   **Description**: Assistant for deploying applications to Google Cloud,
-    supporting Static Sites (GCS), Cloud Run (Buildpacks or Images), and GKE.
--   **URL**:
-    https://raw.githubusercontent.com/gemini-cli-extensions/devops/main/skills/gcp-cicd-deploy/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `gcloud`
-    -   **Keywords**: `Cloud Run`, `GCS`, `Static Site`, `Deployment`, `Google
-        Cloud`
+### google-cicd-release-orchestration
 
-### gcp-cicd-design
+- **Description**: Orchestrate Google Cloud releases and delivery pipelines.
+- **Repository**: gemini-cli-extensions/devops
+- **Publisher**: Gemini CLI Extensions
+- **Revision**: `85812c656ac5e04349e93958b2f2823e15c5adf5`
+- **Path**: `skills/google-cicd-release-orchestration/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `skaffold`
+  - **Keywords**: `Cloud Deploy`, `delivery pipeline`, `skaffold.yaml`,
+    `clouddeploy.yaml`
 
--   **Description**: Assistant for designing, building, and managing CI/CD
-    pipelines on Google Cloud, focusing on architectural design and
-    implementation planning.
--   **URL**:
-    https://raw.githubusercontent.com/gemini-cli-extensions/devops/main/skills/gcp-cicd-design/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Keywords**: `CI/CD`, `Pipeline Design`, `Google Cloud`, `Architectural
-        Design`
+### google-cicd-terraform
 
-### gcp-cicd-terraform
-
--   **Description**: Use Terraform to provision Google Cloud resources (GKE,
-    Cloud Run, Cloud SQL) with standard GCS backend state management and IAM
-    least-privilege.
--   **URL**:
-    https://raw.githubusercontent.com/gemini-cli-extensions/devops/main/skills/gcp-cicd-terraform/
--   **Party**: 1p
--   **Detection Signals**:
-    -   **Dependencies**: `terraform`
-    -   **Keywords**: `Terraform`, `GCP`, `GCS Backend`, `Infrastructure as
-        Code`, `IaC`
+- **Description**: Provision Google Cloud infrastructure with Terraform.
+- **Repository**: gemini-cli-extensions/devops
+- **Publisher**: Gemini CLI Extensions
+- **Revision**: `85812c656ac5e04349e93958b2f2823e15c5adf5`
+- **Path**: `skills/google-cicd-terraform/SKILL.md`
+- **Party**: 1p
+- **Detection Signals**:
+  - **Dependencies**: `terraform`
+  - **Keywords**: `Terraform`, `GCP`, `GCS Backend`, `Infrastructure as Code`

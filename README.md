@@ -2,12 +2,12 @@
 
 [![skills.sh](https://skills.sh/b/oddradiocircle/conductor-portable)](https://skills.sh/oddradiocircle/conductor-portable)
 
-Portable Conductor protocols for spec-driven development.
+Portable, en-US canonical Conductor protocols for spec-driven development.
 
 This project preserves the six Conductor protocols and their project artifacts
 while replacing assumptions about a particular agent or harness with a small
-capability contract. Host adapters provide the binding to the tools available
-in each environment.
+capability contract. The canonical workflow remains in English (en-US). Each
+host binds the abstract capabilities to its own tools and skill directories.
 
 ## Included Skills
 
@@ -26,19 +26,24 @@ List the available skills:
 npx skills@latest add oddradiocircle/conductor-portable --full-depth --list
 ```
 
-Install all six skills for a supported agent:
+The recommended installation installs all six skills so every protocol handoff
+is available:
 
 ```bash
 npx skills@latest add oddradiocircle/conductor-portable \
   --full-depth --all --copy -y
 ```
 
-Install one protocol:
+Advanced: install one protocol only:
 
 ```bash
 npx skills@latest add oddradiocircle/conductor-portable \
   --full-depth --skill conductor-setup --copy -y
 ```
+
+A single-skill installation does not install handoff dependencies. If a sibling
+protocol is unavailable, Conductor halts and asks for the complete package
+instead of silently skipping the handoff.
 
 For Hermes, use the technical agent identifier `hermes-agent`:
 
@@ -63,12 +68,24 @@ execution rules are documented in
 
 ## Design Guarantees
 
+- The normative protocol and artifact language remains canonical en-US.
 - The six protocols remain independently discoverable and installable.
 - The project root is the active project directory; Conductor artifacts stay
   under `conductor/`.
 - Host-specific tool names are bindings, not workflow changes.
 - The original decision gates, status markers, Git history requirements, and
   verification checkpoints are preserved.
+- Optional external skills are resolved from immutable Git revisions, validated,
+  and installed through the active host rather than a hardcoded directory.
+
+## Verification
+
+Run the network-free package and behavior checks:
+
+```bash
+python3 tests/validate_package.py
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+```
 
 ## Attribution
 
