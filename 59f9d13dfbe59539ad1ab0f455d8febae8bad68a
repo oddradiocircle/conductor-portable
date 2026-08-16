@@ -1,0 +1,1 @@
+Rewrote the package README with harness-specific installation, handoff requirements, project structure, safety rules, verification steps, and concise operational guidance. Added regression coverage for explicit harness selection and prohibited language references.
