@@ -213,6 +213,16 @@ class PortabilityContractTests(unittest.TestCase):
         self.assertNotIn("English", text)
         self.assertNotRegex(text, r"(?i)\blanguage\b")
 
+    def test_readme_explains_original_conductor_equivalence_and_adaptation(self) -> None:
+        text = (ROOT / "README.md").read_text(encoding="utf-8")
+        intro = " ".join(text[: text.index("## Choose This Package When")].split())
+        self.assertIn("portable version of the original Conductor project", intro)
+        self.assertIn("gemini-cli-extensions/conductor", intro)
+        self.assertIn("behavioral equivalence", intro)
+        self.assertIn("sequence, status markers, confirmations, Git checkpoints", intro)
+        self.assertIn("any compatible agent or harness", intro)
+        self.assertIn("original repository's six workflows", intro)
+
 
 if __name__ == "__main__":
     unittest.main()

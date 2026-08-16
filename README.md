@@ -2,13 +2,16 @@
 
 [![skills.sh](https://skills.sh/b/oddradiocircle/conductor-portable)](https://skills.sh/oddradiocircle/conductor-portable)
 
-Conductor Portable is a set of six skills for spec-driven project work. It helps
-an agent set up a project, plan a track, implement work, review changes, report
-status, and revert completed work.
+Conductor Portable is a portable version of the original Conductor project from
+[`gemini-cli-extensions/conductor`](https://github.com/gemini-cli-extensions/conductor).
+It brings the original repository's six workflows here as independently
+installable skills for spec-driven project work.
 
-The package keeps Conductor workflow gates and project artifacts stable. Each
-harness maps its own tools to the required capabilities. The workflow does not
-depend on a fixed skill directory or a fixed command interface.
+The goal is behavioral equivalence. The package preserves the original
+sequence, status markers, confirmations, Git checkpoints, project artifacts,
+and skill handoffs. It adapts those operations to any compatible agent or
+harness by binding native file, command, Git, interaction, and skill-loading
+capabilities. The process and observable results stay the same.
 
 ## Choose This Package When
 
