@@ -209,3 +209,13 @@ __marimo__/
 tmp/
 
 .gemini/
+
+# Conductor Portable private maintenance state.
+.conductor-maintenance/
+
+# Agent installation and skills CLI artifacts.
+.agents/
+skills-lock.json
+
+# Local test output.
+.tmp/
