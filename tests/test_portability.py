@@ -198,11 +198,20 @@ class PortabilityContractTests(unittest.TestCase):
         self.assertIn("Tracks Registry", normalized)
         self.assertIn("source deletion and destination addition or rename", normalized)
 
-    def test_readme_states_language_and_handoff_installation_contract(self) -> None:
+    def test_readme_documents_harness_scoped_full_package_installation(self) -> None:
         text = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertIn("canonical workflow remains in English (en-US)", text)
-        self.assertIn("recommended installation", text.lower())
+        self.assertIn("Install all skills for one harness", text)
+        self.assertIn("--skill '*'", text)
+        self.assertIn("--agent claude-code", text)
+        self.assertIn("--agent codex", text)
+        self.assertIn("--agent gemini-cli", text)
+        self.assertIn("--agent opencode", text)
+        self.assertIn("--agent hermes-agent", text)
+        self.assertIn("HERMES_HOME", text)
         self.assertIn("does not install handoff dependencies", text)
+        self.assertNotIn("en-US", text)
+        self.assertNotIn("English", text)
+        self.assertNotRegex(text, r"(?i)\blanguage\b")
 
 
 if __name__ == "__main__":
