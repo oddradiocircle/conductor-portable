@@ -1,0 +1,1 @@
+Hardened portable Conductor workflows: resource roots, package-safe external skill installation, review/revert safety gates, and regression coverage. Verified with validator, 22 unit tests, compilation, CLI discovery, and clean multi-harness installations.
