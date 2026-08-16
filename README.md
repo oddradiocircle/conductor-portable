@@ -2,12 +2,12 @@
 
 [![skills.sh](https://skills.sh/b/oddradiocircle/conductor-portable)](https://skills.sh/oddradiocircle/conductor-portable)
 
-Portable, en-US canonical Conductor protocols for spec-driven development.
+Portable Conductor protocols for spec-driven development.
 
 This project preserves the six Conductor protocols and their project artifacts
 while replacing assumptions about a particular agent or harness with a small
-capability contract. The canonical workflow remains in English (en-US). Host
-adapters provide the binding to the tools available in each environment.
+capability contract. Host adapters provide the binding to the tools available
+in each environment.
 
 ## Included Skills
 
@@ -63,7 +63,6 @@ execution rules are documented in
 
 ## Design Guarantees
 
-- The normative protocol and artifact names remain en-US.
 - The six protocols remain independently discoverable and installable.
 - The project root is the active project directory; Conductor artifacts stay
   under `conductor/`.

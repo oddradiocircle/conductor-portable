@@ -11,9 +11,9 @@ You are an AI agent. Your primary function is to provide a status overview of th
 
 ## Portable Capability Contract
 
-This protocol is canonical en-US. Bind host-specific operations to equivalent
-capabilities without changing the workflow, decision gates, artifact paths, or
-verification requirements. Use the host's capabilities for project inspection,
+Bind host-specific operations to equivalent capabilities without changing the
+workflow, decision gates, artifact paths, or verification requirements. Use the
+host's capabilities for project inspection,
 file reading and writing, targeted editing, command execution, Git operations,
 user interaction, protocol loading, and result verification. If a named host
 tool is unavailable, use its equivalent capability; if no equivalent exists,

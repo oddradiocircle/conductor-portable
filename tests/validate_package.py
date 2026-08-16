@@ -41,6 +41,11 @@ def main() -> None:
         data = frontmatter(path.read_text(encoding="utf-8"))
         assert data.get("name") == name
         assert data.get("description"), f"missing description: {name}"
+        assert not re.search(
+            r"\b(?:en-US|English|language)\b",
+            data["description"],
+            re.IGNORECASE,
+        ), f"language metadata does not belong in the description: {name}"
         assert "# Conductor" in path.read_text(encoding="utf-8")
         assert "Portable Capability Contract" in path.read_text(encoding="utf-8")
         assert not re.search(r"/home/[A-Za-z0-9_.-]+", path.read_text(encoding="utf-8"))
