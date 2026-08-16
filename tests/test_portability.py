@@ -190,6 +190,14 @@ class PortabilityContractTests(unittest.TestCase):
         self.assertIn("git diff --cached", text)
         self.assertIn("untracked files", text)
 
+    def test_review_archive_stages_source_destination_and_registry(self) -> None:
+        text = (ROOT / "skills/conductor-review/SKILL.md").read_text(encoding="utf-8")
+        normalized = " ".join(text.split())
+        self.assertIn("source track path", normalized)
+        self.assertIn("destination archived track path", normalized)
+        self.assertIn("Tracks Registry", normalized)
+        self.assertIn("source deletion and destination addition or rename", normalized)
+
     def test_readme_states_language_and_handoff_installation_contract(self) -> None:
         text = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertIn("canonical workflow remains in English (en-US)", text)

@@ -300,8 +300,10 @@ If a finding contains a credential or secret, omit the diff entirely and use
     - Ensure `conductor/archive/` directory exists.
     - Move the track folder to `conductor/archive/<track_id>/`.
     - Remove the track section from the **Tracks Registry**.
-    - Stage only the moved track path and the Tracks Registry, verify the staged
-      diff contains no other paths, and commit with message:
+    - Stage only the resolved source track path (including its deletion), the
+      destination archived track path, and the **Tracks Registry**. Verify the
+      staged diff contains no other paths and records the source deletion and
+      destination addition or rename before committing. Commit with message:
       `chore(conductor): Archive track '<track_name>'`.
     - Announce to the user that the track has been archived.
 
