@@ -1,0 +1,1 @@
+Require archive cleanup to stage the resolved source deletion, archived destination addition or rename, and Tracks Registry; add regression coverage for non-git filesystem moves.
